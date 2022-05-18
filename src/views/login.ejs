@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pustakam</title>
+
+    <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+    <link rel='stylesheet' href='css/login.css'>
+
+</head>
+<body>
+
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/">Pustakam.Com</a>
+      
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+      
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/login">Log In
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+
+      
+          </ul>
+          <!-- Links -->
+      
+
+        </div>
+        <!-- Collapsible content -->
+      
+    </nav>
+    <!--Navbar end-->
+
+
+    <!-- modal start -->
+    <div class='modal-dialog text-center mx-auto'>
+        <div class='col-sm-7 main-section'>
+          <div class="modal-content">
+
+            <div class="col-12 user-img">
+              <img src='images/face.png'>
+            </div>
+            <br>
+
+            <form class='col-12' action="/login/check" onsubmit="return validate()" method="GET">
+
+              <div class="form-group">
+                <input id="uid" name="uid" class='form-control' type="email" placeholder="Enter Username(email id)" id="mail" required>
+                <label for="email" id="feedback" style="color:red; visibility:hidden">Enter valid e-mail id</label>
+
+              </div>
+
+
+
+              <div class="form-group">
+                  <input id="pwd" name="pwd" class='form-control' type="password" placeholder="Enter Password" id="pwd" required>
+                  <label for="pwd" id="feedback2" style="color:red; visibility:hidden">Password should be minimum 8 characters</label>
+              </div>
+
+              <button id="login" name="login" type="submit" class="btn btn-success text-center"><i class="fas fa-sign-in-alt"></i>Log in</button>
+            </form>
+            
+          </div>
+          <!-- modal content end-->
+          
+        </div>
+
+
+    </div>
+    <!-- modal end -->
+
+    <br>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark pt-2 fixed-bottom">
+
+
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="/"> Pustakam.com</a>
+        </div>
+        <!-- Copyright -->
+  
+    </footer>
+    <!-- Footer end-->
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+              
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="js/login.js"></script>
+
+    <!-- <script>
+      $("#login").click(function(e){
+          e.preventDefault();
+          alert("Are you sure you want to log in?");
+          
+          const data = {
+              "uid": $('#uid').val(),
+              "pwd": $('#pwd').val(),
+      
+          }
+      
+        $.ajax
+        ({
+          url: `/login/check`,
+        method:'post', 
+        data:JSON.stringify(data),
+        contentType:"application/json",
+        success: function(result){
+            alert("new author added successfully");
+          window.location = "/authors";
+          console.log(result);
+          }
+          });
+
+        });
+
+  </script> -->
+
+</body>
+</html>

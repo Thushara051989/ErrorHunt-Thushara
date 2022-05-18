@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pustakam</title>
+    <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel='stylesheet' href='css/signup.css'>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/">Pustakam.Com</a>
+          
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+              aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+          
+              <!-- Links -->
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/login">Log In
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/signup">Sign Up</a>
+                </li>
+
+        
+          
+              </ul>
+              <!-- Links -->
+          
+
+            </div>
+            <!-- Collapsible content -->
+          
+    </nav>
+    <!--Navbar-->
+    
+
+    <!-- Material form register -->
+    <div class="card mx-auto container">
+
+
+        
+            <h3 class="card-header info-color white-text text-center py-4">
+                <strong>Sign Up</strong>
+            </h3><br>
+        
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+        
+                <!-- Form -->
+                <form class="text-center" action="/signup/adduser" style="color: #757575;" onsubmit="return validate()">
+        
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                <label for="fname">First name</label>
+                                <input type="text" id="fname" class="form-control" required>
+                                <label for="fname" id="fnamefeedback" style="color:red; visibility:hidden">Should contain only alphabets.</label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                <label for="lname">Last name</label>   
+                                <input type="text" id="lname" class="form-control" required>
+                                <label for="lname" id="lnamefeedback" style="color:red; visibility:hidden">Should contain only alphabets.</label>
+                         </div>
+                        </div>
+                    </div>
+        
+                    <!-- E-mail -->
+                    <div class="md-form mt-0">
+                        <label for="email">E-mail</label>
+                        <input id="uid" name="uid" type="email" id="email" class="form-control" required>
+                        <label for="email" id="emailfeedback" style="color:red; visibility:hidden">Enter valid e-mail id.</label>
+
+                    </div>
+        
+
+        
+
+        
+                    <!-- Password -->
+                    <div class="md-form mt-0">
+                        <label for="pwd">Password</label>
+                        <input id="pwd" name="pwd" type="password" id="pwd" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" required>
+                        <label for="pwd" id="pwdfeedback" style="color:red; visibility:hidden">Password should be minimum 8 characters</label>
+        
+                    </div>
+              
+                    <!-- Sign up button -->
+                    <!-- <button class="btn btn-outline-info btn-rounded  my-4 waves-effect z-depth-0" type="submit">Sign Up</button> -->
+                    <button id="signup" name="signup" type="submit" class="btn btn-success text-center">Sign Up</button>
+                    <br>
+        
+                    
+                    <!-- Terms of service -->
+                    <p>By clicking
+                        <em>Sign Up</em> you agree to our
+                        <a href="#" >terms of service</a>
+        
+                </form>
+                <!-- End of Form -->
+        
+            </div>
+        
+
+    </div>
+    <!-- End of Material form register -->
+
+    <br>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white py-3">© 2019 Copyright:
+            <a href="/"> Pustakam.com</a>
+            </div>
+            <!-- Copyright end -->
+    
+            
+    </footer>
+    <!-- Footer End-->
+
+    <script src="js/signup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pustakam</title>
+    <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel='stylesheet' href='/css/editbook.css'>
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+
+        <!-- Navbar brand -->
+        <!-- <a class="navbar-brand" href="/home"><i class="fas fa-home"></i></a> -->
+        <a class="navbar-brand" href="/home">Pustakam.Com</a>
+      
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+      
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/authors">Authors
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/books">Books</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/books/addbook">Add Book</a>
+            </li>
+            <li class="nav-item active">
+                  <a class="nav-link" href="/authors/addauthor">Add Author</a>
+            </li>
+
+    
+      
+          </ul>
+          <!-- Links -->
+      
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+        </div>
+        <!-- Collapsible content -->
+      
+    </nav>
+    <!--Navbar end-->
+    
+
+<!-- Default form contact -->
+<form class="container editbook text-center border border-light p-5 justify-content-center" action="/books/update" method="POST">
+
+
+
+    <p class="h4 mb-4">Edit Book Form</p>
+
+    <!-- Title -->
+    <input id="title" name="title" type="text" value="<%=data.title%>"  class="form-control mb-4" placeholder="Book Name">
+
+    <br>
+    <!-- Author -->
+    <input id="author" name="author" type="text" value="<%=data.author%>"  class="form-control mb-4" placeholder="Author Name">
+
+    <br>
+    <!-- Image -->
+    <input id="image" name="image" type="file" value="/images/<%=data.image%>"  class="form-control mb-4" placeholder="Upload Image">
+
+
+    <br>
+    <!-- About -->
+    <div class="form-group">
+        <input id="about" value="<%=data.about%>" name="about" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="About Book (less than 150 words)">
+    </div>
+
+    <br>
+
+
+    <!-- Send button -->
+   
+    <input type="hidden" name="id" value="<%=data._id%>">
+    <button id="updatebtn" class="btn btn-success" type="submit">Update Book</button>
+    
+    
+  
+</form>
+<!-- Default form contact -->
+
+    <br>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center text-white py-3">© 2019 Copyright:
+            <a href="/home"> Pustakam.com</a>
+            </div>
+            <!-- Copyright end -->
+    
+            
+    </footer>
+    <!-- Footer End-->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+        
+   
+
+   
+
+</body>
+</html>

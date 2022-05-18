@@ -1,0 +1,70 @@
+body{
+    background-image: url('../images/bg3.jpg');
+    background-size: cover;
+    
+    
+  }
+
+.navbar{
+    background:rgb(0, 0, 0);
+    opacity: .75;
+    
+    width:100%;
+      
+}
+
+
+
+.carousel-item{
+
+    height: 100vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+
+    /* height:500px;
+    margin-top: 100px;
+    padding-bottom: 75px;
+    padding-left: 75px;
+    padding-right: 75px; */
+    /* min-height: 500px; */
+    background: no-repeat center center scroll;
+    background-size: cover;
+    /* opacity: 50%; */
+    
+}
+
+
+.carousel-caption{
+    bottom: 270px;
+    opacity: 75%;
+}
+
+
+.carousel-caption h5{
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: rgb(185, 156, 142);    
+}
+
+
+.carousel-caption h4{
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+footer{
+    
+    color: white;
+    background: black;
+    opacity:.75 !important;
+    
+}
+a{
+    color: white;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: white;
+}

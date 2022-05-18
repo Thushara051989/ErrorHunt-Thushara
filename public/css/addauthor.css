@@ -1,0 +1,51 @@
+body{
+    background-image: url('../images/bg3.jpg');
+    background-size: cover;
+    
+  }
+
+.navbar{
+    background:rgb(0, 0, 0);
+    opacity: .75;
+    
+    width:100%;
+}
+
+.addauthor{
+    margin-top: 100px;
+    width: 750px;
+    background: rgb(0, 0, 0,0.8);
+    color: white;
+}
+  
+  .card
+  {
+      
+        width: 700px;
+    height:550px;
+      margin-top: 100px;
+      background: black;
+      opacity: .75;
+      color: white;
+  
+  
+  }
+
+
+
+footer{
+    
+    color: white;
+    background: black;
+    opacity:.75 !important;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: white;
+}
