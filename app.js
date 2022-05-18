@@ -48,13 +48,13 @@ app.use('/books',booksRouter);
 app.use('/authors',authorsRouter); 
 
 
+//Part#2, part6  changing nav bar
+app.get('/',cors(),function(req,res){    //Part #2,point 7, usage of cors()
 
-app.get('/',function(req,res){
-
-    res.render('index',{ nav,
-        title: "Library"});
+    res.render('index',{ 
+        nav:[{link:'/login',name:'Log In'},{link:'/signup',name:'Sign Up'}]
     
-});
+    })});
 
 
 

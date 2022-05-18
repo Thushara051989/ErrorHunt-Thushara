@@ -66,6 +66,7 @@ if(regFname.test(myFname)){
         // if mail invalid
         else{
             mailfb.style.visibility="visible";
+            
             return false;
 
         }

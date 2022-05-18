@@ -1,6 +1,6 @@
 const express = require('express'); 
 const authorsRouter = express.Router();
-// const authors = require('../data/authors');
+ const authors = require('../data/authors');
 const authordata = require('../model/AuthorModel');
 
 
