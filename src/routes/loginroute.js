@@ -1,7 +1,9 @@
 const express = require('express'); 
 const loginRouter = express.Router();
 const user = require('../data/user');
-
+const app=new express();
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 loginRouter.get('/',function(req,res){
 
     res.render('login',{});
@@ -11,8 +13,10 @@ loginRouter.get('/',function(req,res){
 
 loginRouter.get("/check",function(req,res){
     var checkuser = {
-        uid:req.param("uid"),
-        pwd:req.param("pwd")
+        // uid:req.param("uid"),
+         uid:req.params.uid,     //Paty #2, point 10...method is req.params
+        pwd:req.params.pwd
+        // pwd:req.param("pwd")
     };
     
     console.log(checkuser);

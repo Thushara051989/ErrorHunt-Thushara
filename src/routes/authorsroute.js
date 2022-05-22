@@ -4,7 +4,6 @@ const authorsRouter = express.Router();
 const authordata = require('../model/AuthorModel');
 
 
-
 //router to render authors page
 authorsRouter.get('/',function(req,res){
 
@@ -34,7 +33,7 @@ authorsRouter.post('/add', function (req, res) {
 
     var item={
         title:req.body.title,
-        image:req.body.images,
+        image:req.body.image,// Part#2,point 8..spelling of image
         about:req.body.about
     }
     console.log(item)  ;
