@@ -30,12 +30,16 @@ authorsRouter.get('/addauthor',function(req,res){
 
 //router to add author
 authorsRouter.post('/add', function (req, res) {
-
+   try{
     var item={
         title:req.body.title,
         image:req.body.image,// Part#2,point 8..spelling of image
         about:req.body.about
-    }
+    };
+}
+catch(e){
+    console.log(e);
+  }
     console.log(item)  ;
     const author = new authordata(item);
     author.save();

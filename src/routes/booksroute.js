@@ -31,13 +31,17 @@ booksRouter.get('/addbook',function(req,res){
 
 //router to add book
 booksRouter.post('/add', function (req, res) {
-
+   try{
         var item={
             title:req.body.title,
             author:req.body.author,
             image:req.body.image,
             about:req.body.about
-        }
+        };
+    }
+    catch(e){
+        console.log(e);
+      }
         console.log(item)  ;
         const book = new bookdata(item);
         book.save();
