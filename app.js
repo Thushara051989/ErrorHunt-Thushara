@@ -59,7 +59,7 @@ app.get('/',cors(),function(req,res){    //Part #2,point 7, usage of cors()
 
 
 
-app.set('port',process.env.PORT || 3000)
-app.listen(3000,()=>{   //changed the port number Part#1,point5
-    console.log("Server Ready on 3000");
+const PORT=(process.env.PORT || 3000);
+app.listen(PORT,()=>{   //changed the port number Part#1,point5
+    console.log(`Server Ready on ${PORT}`);
 });
