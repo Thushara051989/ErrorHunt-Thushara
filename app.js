@@ -1,28 +1,28 @@
-// Part#1,point1-node modules not present..install express
+// Part#1,point1-check package.json ..Change main to app.js
 const express = require('express'); 
 const path = require ('path'); 
-const cors = require('cors');
-const bodyParser = require('body-parser');  //import body parser 
+const cors = require('cors');  //Part #2,point 7, usage of cors()
+const bodyParser = require('body-parser');  //import body parser Part #1,point 2
 const mongoose=require('mongoose');
-// Part #1, point2 run mongod server
-const nav= [
-    {
-        link:"/books",
-        title:"Books"
-    },
-    {
-        link:"/authors",
-        title:"Authors"
-    },
-    {
-        link:"/addbook",
-        title:"Add Book"
-    },
-    {
-        link:"/addauthor",
-        title:"Add Author"
-    }
-]
+
+// const nav= [            Part #2,point 6, nav is not used.
+//     {
+//         link:"/books",
+//         title:"Books"
+//     },
+//     {
+//         link:"/authors",
+//         title:"Authors"
+//     },
+//     {
+//         link:"/addbook",
+//         title:"Add Book"
+//     },
+//     {
+//         link:"/addauthor",
+//         title:"Add Author"
+//     }
+// ]
 
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
@@ -47,7 +47,6 @@ app.use('/books',booksRouter);
 app.use('/authors',authorsRouter); 
 
 
-//Part#2, part6  changing nav bar
 app.get('/',cors(),function(req,res){    //Part #2,point 7, usage of cors()
 
     res.render('index',{ 
